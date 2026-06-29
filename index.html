@@ -1,50 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ultimate PDF Toolkit</title>
+    <meta charset="UTF-8">
+
+    <title>Ultimate PDF Toolkit - Free Online PDF Tools</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Online PDF Tools - Merge, Compress, Convert, OCR and Secure PDFs easily.">
-    
+
+    <meta name="description" content="Free Online PDF Tools - Merge PDF, Compress PDF, Convert PDF, OCR, Images to PDF, Word to PDF and secure PDFs easily.">
+
+    <meta name="keywords" content="PDF tools, compress PDF, merge PDF, PDF to Word, Word to PDF, images to PDF, OCR PDF, free PDF tool">
+
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
             font-family: Arial, sans-serif;
             background: #f3f4f6;
-            text-align: center;
+            color: #111827;
         }
 
         header {
-            background: #111827;
+            background: linear-gradient(135deg, #111827, #1e3a8a);
             color: white;
-            padding: 40px 20px;
+            text-align: center;
+            padding: 45px 20px;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 32px;
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
         }
 
-        p {
-            margin: 10px 0;
+        header p {
+            font-size: 17px;
+            opacity: 0.9;
         }
 
-        .container {
-            padding: 30px;
+        .hero {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: 18px;
+            padding: 40px 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .hero-card h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .hero-card p {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto 25px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 18px 12px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .start-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 34px;
+            border-radius: 999px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .start-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .tool-section {
+            display: none;
+            max-width: 1600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .tool-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .tool-header h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .tool-header p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
         }
 
         iframe {
             width: 100%;
-            height: 85vh;
+            height: 88vh;
             border: none;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            display: block;
+            background: white;
+        }
+
+        .direct-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .direct-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .info-section {
+            max-width: 1100px;
+            margin: 25px auto;
+            padding: 0 20px 30px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .info-card h3 {
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .info-card p {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 15px;
         }
 
         footer {
-            padding: 20px;
             background: #111827;
             color: white;
+            text-align: center;
+            padding: 25px 20px;
             font-size: 14px;
+        }
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 32px 15px;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .hero-card {
+                padding: 28px 18px;
+            }
+
+            .hero-card h2 {
+                font-size: 24px;
+            }
+
+            iframe {
+                height: 78vh;
+            }
+
+            .tool-section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -53,16 +227,86 @@
 
 <header>
     <h1>🚀 Ultimate PDF Toolkit</h1>
-    <p>Convert • Compress • Merge • Secure • OCR</p>
+    <p>Convert • Compress • Merge • OCR • Secure PDF Files</p>
 </header>
 
-<div class="container">
-    <iframe src="https://vishala5005-office-tools.hf.space" allowfullscreen></iframe>
-</div>
+<section class="hero" id="home">
+    <div class="hero-card">
+        <h2>Free Online PDF Tools</h2>
+        <p>
+            Use our all-in-one PDF toolkit to compress PDFs, merge files, convert images to PDF,
+            convert PDF to Word, extract text, OCR scanned PDFs, add passwords and more.
+        </p>
+
+        <div class="features">
+            <div class="feature">🗜 Compress PDF</div>
+            <div class="feature">📑 Merge PDFs</div>
+            <div class="feature">🖼 Images to PDF</div>
+            <div class="feature">📄 PDF to Word</div>
+            <div class="feature">📝 Word to PDF</div>
+            <div class="feature">🔐 Secure PDF</div>
+            <div class="feature">🔍 OCR PDF</div>
+            <div class="feature">✂ Split PDF</div>
+        </div>
+
+        <button class="start-btn" onclick="startTool()">Start Using Tool</button>
+    </div>
+</section>
+
+<section class="tool-section" id="toolSection">
+    <div class="tool-header">
+        <h2>Ultimate PDF Toolkit</h2>
+        <p>Upload your file and use any PDF tool below.</p>
+    </div>
+
+    <div class="iframe-wrapper">
+        <iframe 
+            src="https://vishala5005-office-tools.hf.space"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="direct-link">
+        If the tool does not load, 
+        <a href="https://vishala5005-office-tools.hf.space" target="_blank">
+            open it directly here
+        </a>.
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="info-card">
+        <h3>Why Use This PDF Toolkit?</h3>
+        <p>
+            This free online PDF toolkit helps you manage PDF files quickly from your browser.
+            You can compress large PDFs, merge multiple PDFs, convert Word documents, extract text,
+            perform OCR on scanned files and protect your documents with passwords.
+        </p>
+    </div>
+</section>
 
 <footer>
-    © 2026 Ultimate PDF Toolkit | Powered by HuggingFace
+    <p>© 2026 Ultimate PDF Toolkit | Powered by HuggingFace Spaces</p>
+    <p style="margin-top: 10px;">
+        <a href="#">Privacy Policy</a>
+        |
+        <a href="#">Terms</a>
+        |
+        <a href="#">Contact</a>
+    </p>
 </footer>
+
+<!-- Terra / EffectiveCPM Popunder Ad Script -->
+<script src="https://pl29710233.effectivecpmnetwork.com/03/f7/3e/03f73ed711fb6fa95ec281c5c7ac1f76.js"></script>
+
+<script>
+    function startTool() {
+        document.getElementById("toolSection").style.display = "block";
+        document.getElementById("toolSection").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+</script>
 
 </body>
 </html>
