@@ -19,14 +19,14 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #111827, #1e3a8a);
+    background: #111827;
     color: white;
     text-align: center;
-    padding: 30px 15px;
+    padding: 25px;
 }
 
 header h1 {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 /* MAIN LAYOUT */
@@ -36,17 +36,17 @@ header h1 {
     align-items: flex-start;
     max-width: 1600px;
     margin: 20px auto;
-    padding: 0 10px;
     gap: 20px;
+    padding: 0 10px;
 }
 
-/* LEFT & RIGHT ADS */
+/* SIDE ADS */
 .ad-side {
     width: 160px;
     min-width: 160px;
     background: white;
-    border-radius: 10px;
     padding: 10px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
@@ -69,24 +69,18 @@ iframe {
 
 /* FOOTER */
 footer {
-    background: #111827;
-    color: white;
     text-align: center;
     padding: 15px;
+    background: #111827;
+    color: white;
     margin-top: 30px;
     font-size: 14px;
 }
 
-/* ✅ RESPONSIVE RULES */
-
-/* Hide side ads on tablets & mobiles */
+/* ✅ RESPONSIVE */
 @media (max-width: 1024px) {
     .ad-side {
         display: none;
-    }
-
-    .main-wrapper {
-        padding: 0 5px;
     }
 
     iframe {
@@ -94,10 +88,9 @@ footer {
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     iframe {
@@ -117,10 +110,10 @@ footer {
 
     <!-- ✅ LEFT BANNER -->
     <div class="ad-side">
-        <script async="async" data-cfasync="false"
-            src="https://pl29710234.effectivecpmnetwork.com/eb3c621e9d8f277dae4be750141c4914/invoke.js">
+        <script async data-cfasync="false"
+        src="https://pl29710234.effectivecpmnetwork.com/LEFT_ZONE_ID/invoke.js">
         </script>
-        <div id="container-eb3c621e9d8f277dae4be750141c4914-left"></div>
+        <div id="container-LEFT_ZONE_ID"></div>
     </div>
 
     <!-- ✅ CENTER TOOL -->
@@ -130,10 +123,10 @@ footer {
 
     <!-- ✅ RIGHT BANNER -->
     <div class="ad-side">
-        <script async="async" data-cfasync="false"
-            src="https://pl29710234.effectivecpmnetwork.com/eb3c621e9d8f277dae4be750141c4914/invoke.js">
+        <script async data-cfasync="false"
+        src="https://pl29710234.effectivecpmnetwork.com/RIGHT_ZONE_ID/invoke.js">
         </script>
-        <div id="container-eb3c621e9d8f277dae4be750141c4914-right"></div>
+        <div id="container-RIGHT_ZONE_ID"></div>
     </div>
 
 </div>
